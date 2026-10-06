@@ -4,211 +4,294 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sachin Mishra — Security Researcher</title>
-<meta name="description" content="Top 1% Com Olho bug bounty researcher (#55 globally). Web, API, mobile and AI/LLM security testing with clear, reproducible reports.">
+<meta name="description" content="Top 1% Com Olho bug bounty researcher (#55 globally). Remote web, API, mobile and AI/LLM security testing for Indian and global teams. Validated findings, honest severity, free retest.">
+<link rel="canonical" href="https://yash4078-ops.github.io/portfolio/">
 <meta property="og:title" content="Sachin Mishra — Security Researcher">
-<meta property="og:description" content="Web, API, mobile and AI/LLM security testing. Validated findings, honest severity, clear remediation.">
-<meta name="theme-color" content="#07090d">
-<link rel="canonical" href="https://sachinsec.in/">
-<meta property="og:url" content="https://sachinsec.in/">
+<meta property="og:description" content="Remote penetration testing and bug bounty research. Web, API, mobile and AI/LLM. Hall of Fame at 10 organisations.">
+<meta property="og:url" content="https://yash4078-ops.github.io/portfolio/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2307090d'/><path d='M9 21l6-5-6-5' stroke='%2300e5a0' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M17 22h7' stroke='%2300e5a0' stroke-width='3' stroke-linecap='round'/></svg>">
+<meta name="theme-color" content="#06080c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306080c'/><path d='M9 21l6-5-6-5' stroke='%2300e5a0' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M17 22h7' stroke='%2300e5a0' stroke-width='3' stroke-linecap='round'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Sachin Mishra","jobTitle":"Security Researcher","address":{"@type":"PostalAddress","addressLocality":"Raipur","addressCountry":"IN"},"email":"mailto:yash4078@gmail.com","sameAs":["https://www.linkedin.com/in/sachin-mishra-ab22113a2/","https://github.com/yash4078-ops","https://medium.com/@yash4078","https://www.credly.com/users/avengers-yash-mishra"]}
+</script>
 <style>
 :root{
-  --bg:#07090d; --bg2:#0b0f15; --card:#0e141c; --line:#1b2431; --line2:#263244;
-  --text:#e8edf4; --muted:#8b97a8; --dim:#5b6676;
-  --acc:#00e5a0; --acc2:#3ea6ff; --warn:#ffb020; --crit:#ff4d6a;
-  --r:14px; --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
-  --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --bg:#06080c; --bg2:#0a0e14; --card:#0d131b; --card2:#111924; --line:#1a2330; --line2:#263244;
+  --text:#eef2f8; --muted:#8e9aac; --dim:#5d6878;
+  --acc:#00e5a0; --acc2:#3ea6ff; --acc3:#a78bfa; --warn:#ffb020; --crit:#ff4d6a;
+  --r:16px; --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif; --serif:'Instrument Serif',Georgia,serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;z-index:-2;
-  background:radial-gradient(900px 500px at 80% -10%,rgba(0,229,160,.10),transparent 60%),
-             radial-gradient(800px 500px at -10% 20%,rgba(62,166,255,.09),transparent 60%)}
-body::after{content:"";position:fixed;inset:0;z-index:-1;opacity:.5;
-  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 0%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 10%,transparent 70%)}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-.mono{font-family:var(--mono)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 ::selection{background:var(--acc);color:#001a10}
+.mono{font-family:var(--mono)}
+
+/* ambient background */
+.bg{position:fixed;inset:0;z-index:-2;overflow:hidden}
+.bg i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.5}
+.bg i:nth-child(1){width:620px;height:620px;background:rgba(0,229,160,.20);top:-220px;right:-120px;animation:float 18s ease-in-out infinite}
+.bg i:nth-child(2){width:560px;height:560px;background:rgba(62,166,255,.18);top:260px;left:-220px;animation:float 22s ease-in-out infinite reverse}
+.bg i:nth-child(3){width:480px;height:480px;background:rgba(167,139,250,.12);bottom:-160px;right:12%;animation:float 26s ease-in-out infinite}
+@keyframes float{50%{transform:translate(40px,30px) scale(1.08)}}
+.grid-bg{position:fixed;inset:0;z-index:-1;opacity:.35;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 50% 0%,#000 8%,transparent 68%);-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 8%,transparent 68%)}
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2));z-index:100}
 
 /* nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,9,13,.72);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--mono);font-weight:700;letter-spacing:-.02em}
-.logo b{color:var(--acc)}
-.links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+nav{position:fixed;top:0;left:0;right:0;z-index:60;transition:.3s}
+nav.scrolled{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(6,8,12,.75);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--mono);font-weight:700;letter-spacing:-.02em;font-size:15px;display:flex;align-items:center;gap:10px}
+.logo .mk{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#00140c;font-size:13px}
+.links{display:flex;gap:30px;font-size:14px;color:var(--muted)}
+.links a{transition:.2s;position:relative}
 .links a:hover{color:var(--text)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid var(--line2);transition:.2s;cursor:pointer;background:transparent;color:var(--text);font-family:var(--sans)}
-.btn:hover{border-color:var(--acc);transform:translateY(-1px)}
-.btn.primary{background:var(--acc);color:#00140c;border-color:var(--acc)}
-.btn.primary:hover{box-shadow:0 8px 30px -6px rgba(0,229,160,.5)}
-.menu{display:none;background:none;border:0;color:var(--text);font-size:24px;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 24px;border-radius:12px;font-weight:600;font-size:14.5px;border:1px solid var(--line2);transition:.25s;cursor:pointer;background:rgba(255,255,255,.02);color:var(--text);font-family:var(--sans)}
+.btn:hover{border-color:var(--acc);transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(135deg,var(--acc),#00c98b);color:#00140c;border-color:transparent}
+.btn.primary:hover{box-shadow:0 12px 36px -8px rgba(0,229,160,.55)}
+.btn.sm{padding:10px 18px;font-size:13.5px}
+.menu{display:none;background:none;border:0;color:var(--text);font-size:26px;cursor:pointer}
 
 /* hero */
-.hero{padding:170px 0 110px;position:relative}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12.5px;color:var(--acc);border:1px solid rgba(0,229,160,.3);background:rgba(0,229,160,.06);padding:6px 14px;border-radius:99px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 rgba(0,229,160,.6);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(0,229,160,0)}100%{box-shadow:0 0 0 0 rgba(0,229,160,0)}}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-h1{font-size:clamp(40px,6vw,74px);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:22px 0}
-h1 .grad{background:linear-gradient(95deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:18.5px;color:var(--muted);max-width:560px}
-.cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-.trust{display:flex;gap:26px;margin-top:44px;flex-wrap:wrap;font-size:13px;color:var(--dim)}
+.hero{padding:170px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.pills{display:flex;gap:10px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;padding:7px 14px;border-radius:99px;border:1px solid var(--line2);background:rgba(255,255,255,.02);color:var(--muted)}
+.pill.g{color:var(--acc);border-color:rgba(0,229,160,.35);background:rgba(0,229,160,.06)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--acc);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,229,160,.6)}70%{box-shadow:0 0 0 9px rgba(0,229,160,0)}100%{box-shadow:0 0 0 0 rgba(0,229,160,0)}}
+h1{font-size:clamp(42px,6.2vw,80px);line-height:1.02;letter-spacing:-.04em;font-weight:800;margin:26px 0 24px}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;background:linear-gradient(95deg,var(--acc),var(--acc2) 70%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.05em}
+.lead{font-size:19px;color:var(--muted);max-width:580px}
+.lead b{color:var(--text);font-weight:600}
+.cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.trust{display:flex;gap:26px;margin-top:40px;flex-wrap:wrap;font-size:13.5px;color:var(--dim)}
 .trust span{display:flex;align-items:center;gap:8px}
 .trust svg{width:16px;height:16px;stroke:var(--acc)}
 
-/* terminal */
-.term{background:#090d13;border:1px solid var(--line2);border-radius:var(--r);box-shadow:0 30px 80px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.02) inset;overflow:hidden}
-.term-top{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);background:#0b1017}
-.term-top i{width:11px;height:11px;border-radius:50%;background:#2a3444}
+.stage{position:relative}
+.term{background:rgba(9,13,19,.9);border:1px solid var(--line2);border-radius:var(--r);box-shadow:0 40px 90px -30px rgba(0,0,0,.9),0 0 80px -30px rgba(0,229,160,.25);overflow:hidden;backdrop-filter:blur(8px)}
+.term-top{display:flex;align-items:center;gap:7px;padding:13px 16px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.015)}
+.term-top i{width:11px;height:11px;border-radius:50%}
 .term-top i:nth-child(1){background:#ff5f57}.term-top i:nth-child(2){background:#febc2e}.term-top i:nth-child(3){background:#28c840}
 .term-top span{margin-left:10px;font-family:var(--mono);font-size:12px;color:var(--dim)}
-.term-body{padding:20px 20px 24px;font-family:var(--mono);font-size:13px;line-height:1.9;min-height:330px}
-.term-body .p{color:var(--acc)}.term-body .c{color:var(--muted)}.term-body .ok{color:var(--acc)}.term-body .w{color:var(--warn)}.term-body .x{color:var(--crit)}.term-body .b{color:var(--acc2)}
+.term-body{padding:22px;font-family:var(--mono);font-size:13px;line-height:1.95;min-height:340px}
+.p{color:var(--acc)}.c{color:var(--muted)}.ok{color:var(--acc)}.w{color:var(--warn)}.x{color:var(--crit)}.b{color:var(--acc2)}
 .cursor{display:inline-block;width:8px;height:15px;background:var(--acc);vertical-align:-2px;animation:blink 1s steps(2) infinite}
 @keyframes blink{50%{opacity:0}}
+.float{position:absolute;background:rgba(13,19,27,.92);border:1px solid var(--line2);border-radius:14px;padding:13px 17px;backdrop-filter:blur(10px);box-shadow:0 20px 50px -15px rgba(0,0,0,.8);animation:bob 6s ease-in-out infinite}
+.float b{display:block;font-size:22px;letter-spacing:-.02em;line-height:1.1}
+.float span{font-size:11.5px;color:var(--muted);font-family:var(--mono)}
+.float.f1{left:-34px;bottom:-34px}
+.float.f2{right:-18px;top:-26px;animation-delay:-3s}
+.float b em{font-style:normal;color:var(--acc)}
+@keyframes bob{50%{transform:translateY(-9px)}}
+
+/* marquee */
+.rec{margin-top:70px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden;background:rgba(255,255,255,.012)}
+.rec small{display:block;text-align:center;font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.track{display:flex;gap:56px;width:max-content;animation:scroll 40s linear infinite}
+.track:hover{animation-play-state:paused}
+.track span{font-size:19px;font-weight:600;color:var(--dim);white-space:nowrap;letter-spacing:-.01em;transition:.2s}
+.track span:hover{color:var(--text)}
+@keyframes scroll{to{transform:translateX(-50%)}}
 
 /* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r);background:var(--card);overflow:hidden;margin-top:-30px;position:relative;z-index:2}
-.stat{padding:30px 26px;border-right:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,var(--card),var(--bg2));overflow:hidden;margin-top:70px}
+.stat{padding:34px 30px;border-right:1px solid var(--line)}
 .stat:last-child{border:0}
-.stat b{display:block;font-size:38px;letter-spacing:-.03em;font-weight:800}
-.stat b em{color:var(--acc);font-style:normal}
-.stat span{font-size:13px;color:var(--muted)}
+.stat b{display:block;font-size:46px;letter-spacing:-.04em;font-weight:800;line-height:1.1}
+.stat b em{font-style:normal;background:linear-gradient(135deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:13.5px;color:var(--muted)}
 
 /* sections */
-section{padding:110px 0}
-.tag{font-family:var(--mono);font-size:12.5px;color:var(--acc);letter-spacing:.08em;text-transform:uppercase}
-h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.03em;line-height:1.1;margin:12px 0 16px;font-weight:800}
-.sub{color:var(--muted);max-width:640px;font-size:17px}
-.head{margin-bottom:56px}
+section{padding:120px 0}
+.tag{font-family:var(--mono);font-size:12.5px;color:var(--acc);letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.tag::before{content:"";width:28px;height:1px;background:var(--acc)}
+h2{font-size:clamp(32px,4.4vw,54px);letter-spacing:-.035em;line-height:1.08;margin:16px 0 18px;font-weight:800}
+h2 em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.01em}
+.sub{color:var(--muted);max-width:660px;font-size:17.5px}
+.head{margin-bottom:60px}
+.alt{background:linear-gradient(180deg,transparent,var(--bg2) 15%,var(--bg2) 85%,transparent)}
 
-.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-.about p{color:var(--muted);margin-bottom:18px;font-size:16.5px}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+.me{display:flex;align-items:center;gap:20px;margin-bottom:34px}
+.avatar{width:92px;height:92px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:30px;color:#00140c;background:linear-gradient(135deg,var(--acc),var(--acc2));box-shadow:0 0 0 4px var(--bg),0 0 0 5px var(--line2),0 14px 50px -8px rgba(0,229,160,.5)}
+.me b{display:block;font-size:22px;letter-spacing:-.02em}
+.me span{font-size:14px;color:var(--muted)}
+.about p{color:var(--muted);margin-bottom:18px;font-size:17px}
 .about p strong{color:var(--text);font-weight:600}
-.kv{align-self:start;border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:6px 24px}
-.kv div{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.chip{font-family:var(--mono);font-size:12.5px;padding:8px 14px;border:1px solid var(--line2);border-radius:9px;color:var(--muted);background:var(--bg2);transition:.2s}
+.chip:hover{color:var(--acc);border-color:var(--acc);transform:translateY(-2px)}
+.kv{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,var(--card),var(--bg2));padding:8px 26px}
+.kv div{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid var(--line);font-size:14.5px}
 .kv div:last-child{border:0}
 .kv span{color:var(--dim)}
-.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
-.chip{font-family:var(--mono);font-size:12.5px;padding:7px 13px;border:1px solid var(--line2);border-radius:8px;color:var(--muted);background:var(--bg2);transition:.2s}
-.chip:hover{color:var(--acc);border-color:var(--acc)}
+.kv b{text-align:right}
 
-/* cards */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:.25s;position:relative;overflow:hidden}
-.card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at var(--mx,50%) var(--my,0%),rgba(0,229,160,.09),transparent 70%);opacity:0;transition:.3s}
-.card:hover{border-color:var(--line2);transform:translateY(-3px)}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:var(--r);padding:32px;transition:.3s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 200px at var(--mx,50%) var(--my,0%),rgba(0,229,160,.10),transparent 70%);opacity:0;transition:.3s}
+.card:hover{border-color:var(--line2);transform:translateY(-4px)}
 .card:hover::before{opacity:1}
 .card>*{position:relative}
-.ico{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;background:rgba(0,229,160,.08);border:1px solid rgba(0,229,160,.25);margin-bottom:20px}
-.ico svg{width:22px;height:22px;stroke:var(--acc);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font-size:19px;letter-spacing:-.01em;margin-bottom:10px}
+.span2{grid-column:span 2}.span3{grid-column:span 3}.span4{grid-column:span 4}
+.ico{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;background:rgba(0,229,160,.08);border:1px solid rgba(0,229,160,.28);margin-bottom:22px}
+.ico svg{width:23px;height:23px;stroke:var(--acc);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:20px;letter-spacing:-.015em;margin-bottom:10px}
 .card p{color:var(--muted);font-size:15px}
 .card ul{list-style:none;margin-top:18px;font-size:14px;color:var(--muted)}
 .card li{padding:5px 0 5px 22px;position:relative}
 .card li::before{content:"›";position:absolute;left:4px;color:var(--acc);font-family:var(--mono)}
 
 /* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card)}
-.step{padding:32px 26px;border-right:1px solid var(--line)}
-.step:last-child{border:0}
-.step .n{font-family:var(--mono);font-size:13px;color:var(--acc)}
-.step h3{margin:14px 0 10px;font-size:18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.step{padding:30px 26px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);position:relative}
+.step .n{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:13px;font-weight:700;color:#00140c;background:linear-gradient(135deg,var(--acc),var(--acc2));margin-bottom:20px}
+.step h3{font-size:18px;margin-bottom:10px}
 .step p{font-size:14.5px;color:var(--muted)}
 
-/* findings */
-.find{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;padding:22px 26px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);margin-bottom:14px;transition:.2s}
-.find:hover{border-color:var(--line2);transform:translateX(4px)}
-.sev{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 11px;border-radius:6px;text-transform:uppercase}
-.sev.c{color:var(--crit);background:rgba(255,77,106,.1);border:1px solid rgba(255,77,106,.35)}
+/* hof */
+.hof{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}
+.row{display:grid;grid-template-columns:70px 1fr 160px 120px;gap:18px;align-items:center;padding:20px 28px;border-bottom:1px solid var(--line);transition:.2s}
+.row:last-child{border:0}
+.row:not(.h):hover{background:rgba(255,255,255,.02)}
+.row.h{font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;background:var(--bg2);padding:14px 28px}
+.row h3{font-size:16px;letter-spacing:-.01em}
+.row p{font-size:13px;color:var(--muted)}
+.sev{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 11px;border-radius:7px;text-align:center;width:max-content}
 .sev.h{color:var(--warn);background:rgba(255,176,32,.1);border:1px solid rgba(255,176,32,.35)}
 .sev.m{color:var(--acc2);background:rgba(62,166,255,.1);border:1px solid rgba(62,166,255,.35)}
-.find h3{font-size:17px;margin-bottom:3px}
-.find p{font-size:14px;color:var(--muted)}
-.find .st{font-family:var(--mono);font-size:12px;color:var(--dim);text-align:right}
-.sev.l{color:var(--muted);background:rgba(139,151,168,.08);border:1px solid var(--line2)}
-.find .st a{color:var(--acc)}
-.price{display:flex;flex-direction:column}
-.price .amt{font-size:42px;font-weight:800;letter-spacing:-.03em;margin:14px 0 4px}
-.price .amt small{font-size:14px;color:var(--dim);font-weight:500;letter-spacing:0}
-.price .was{font-family:var(--mono);font-size:12px;color:var(--dim)}
-.price .btn{margin-top:auto;justify-content:center}
-.price ul{margin-bottom:26px}
-.badges{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.badge{padding:22px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);transition:.2s}
-.badge:hover{border-color:var(--acc)}
-.badge b{display:block;font-size:15px;line-height:1.35;margin-bottom:8px}
-.badge span{font-family:var(--mono);font-size:12px;color:var(--dim)}
-.badge i{font-style:normal;display:inline-block;font-family:var(--mono);font-size:10.5px;color:var(--acc);border:1px solid rgba(0,229,160,.3);border-radius:5px;padding:2px 7px;margin-bottom:12px}
-.post{display:block;padding:26px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);transition:.2s}
-.post:hover{border-color:var(--acc);transform:translateY(-3px)}
-.post small{font-family:var(--mono);color:var(--acc);font-size:12px}
-.post h3{margin:10px 0;font-size:19px;line-height:1.35}
-.post p{color:var(--muted);font-size:14.5px}
-.me{display:flex;align-items:center;gap:20px;margin-bottom:26px}
-.avatar{width:84px;height:84px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:28px;color:#00140c;background:linear-gradient(135deg,var(--acc),var(--acc2));box-shadow:0 0 0 4px var(--bg),0 0 0 5px var(--line2),0 10px 40px -8px rgba(0,229,160,.5)}
-.me b{display:block;font-size:20px;letter-spacing:-.01em}
-.me span{font-size:13.5px;color:var(--muted)}
-.note{margin-top:22px;font-size:13.5px;color:var(--dim);font-family:var(--mono)}
+.sev.l{color:var(--muted);background:rgba(142,154,172,.08);border:1px solid var(--line2)}
+.st{font-family:var(--mono);font-size:12px;color:var(--acc)}
+.date{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.note{margin-top:24px;font-size:13.5px;color:var(--dim);font-family:var(--mono)}
+.note a{color:var(--acc)}
 
-/* principles */
-.pr{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+/* badges */
+.badges{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.badge{padding:24px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);transition:.25s}
+.badge:hover{border-color:var(--acc);transform:translateY(-3px)}
+.badge i{font-style:normal;display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--acc);border:1px solid rgba(0,229,160,.3);border-radius:5px;padding:2px 8px;margin-bottom:14px}
+.badge i.ai{color:var(--acc3);border-color:rgba(167,139,250,.35)}
+.badge i.cl{color:var(--acc2);border-color:rgba(62,166,255,.35)}
+.badge b{display:block;font-size:15.5px;line-height:1.4;margin-bottom:8px}
+.badge span{font-family:var(--mono);font-size:12px;color:var(--dim)}
+
+/* posts */
+.posts{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.post{display:block;padding:32px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,var(--card),var(--bg2));transition:.3s}
+.post:hover{border-color:var(--acc);transform:translateY(-4px)}
+.post small{font-family:var(--mono);color:var(--acc);font-size:12px}
+.post h3{margin:12px 0;font-size:21px;line-height:1.3;letter-spacing:-.015em}
+.post p{color:var(--muted);font-size:15px}
+.post .rd{display:inline-block;margin-top:18px;font-size:13.5px;color:var(--acc);font-weight:600}
+
+/* pricing */
+.toggle{display:inline-flex;border:1px solid var(--line2);border-radius:99px;padding:4px;background:var(--bg2);margin-bottom:40px}
+.toggle button{border:0;background:transparent;color:var(--muted);padding:9px 22px;border-radius:99px;font:600 13.5px var(--sans);cursor:pointer;transition:.2s}
+.toggle button.on{background:linear-gradient(135deg,var(--acc),#00c98b);color:#00140c}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.plan{display:flex;flex-direction:column}
+.plan.feat{border-color:rgba(0,229,160,.4);box-shadow:0 0 70px -30px rgba(0,229,160,.4)}
+.plan .badge-top{position:absolute;top:18px;right:18px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:#00140c;background:var(--acc);padding:4px 10px;border-radius:99px;font-weight:700}
+.amt{font-size:46px;font-weight:800;letter-spacing:-.04em;margin:18px 0 2px;line-height:1.1}
+.amt small{font-size:14px;color:var(--dim);font-weight:500;letter-spacing:0}
+.alt-amt{font-family:var(--mono);font-size:12.5px;color:var(--dim);margin-bottom:20px}
+.plan ul{margin:6px 0 28px}
+.plan .btn{margin-top:auto}
+.custom{margin-top:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:26px 32px}
+.custom p{max-width:640px}
+
+/* remote */
+.remote{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rgrid .card{padding:24px}
+.rgrid .card h3{font-size:16.5px;margin-bottom:6px}
+.rgrid .card p{font-size:14px}
+
+/* faq */
+.faq{max-width:860px}
+details{border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:12px;transition:.2s}
+details[open]{border-color:var(--line2)}
+summary{cursor:pointer;list-style:none;padding:22px 26px;font-weight:600;font-size:16.5px;display:flex;justify-content:space-between;gap:18px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--acc);font-size:22px;transition:.25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 26px 24px;color:var(--muted);font-size:15.5px}
 
 /* contact */
-.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
-.ct a.row{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);color:var(--muted);transition:.2s}
-.ct a.row:hover{color:var(--acc);padding-left:6px}
-.ct a.row small{display:block;font-size:12px;color:var(--dim);font-family:var(--mono)}
-form{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:grid;gap:16px}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px}
+.ct a.r{display:flex;align-items:center;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);color:var(--muted);transition:.2s}
+.ct a.r:hover{color:var(--acc);padding-left:8px}
+.ct a.r .ic{width:42px;height:42px;border-radius:11px;border:1px solid var(--line2);display:grid;place-items:center;font-family:var(--mono);font-size:14px;color:var(--acc);flex:none;background:var(--bg2)}
+.ct a.r small{display:block;font-size:12px;color:var(--dim);font-family:var(--mono)}
+.ct a.r div{color:var(--text);font-weight:500}
+form{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:20px;padding:34px;display:grid;gap:18px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{font-size:12.5px;color:var(--muted);font-family:var(--mono);display:block;margin-bottom:6px}
-input,select,textarea{width:100%;background:var(--bg2);border:1px solid var(--line2);color:var(--text);border-radius:9px;padding:12px 14px;font:inherit;font-size:14.5px;outline:none;transition:.2s}
-input:focus,select:focus,textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(0,229,160,.12)}
+label{font-size:12px;color:var(--muted);font-family:var(--mono);display:block;margin-bottom:7px;letter-spacing:.05em}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--line2);color:var(--text);border-radius:11px;padding:13px 15px;font:inherit;font-size:14.5px;outline:none;transition:.2s}
+input:focus,select:focus,textarea:focus{border-color:var(--acc);box-shadow:0 0 0 4px rgba(0,229,160,.1)}
 textarea{min-height:130px;resize:vertical}
 .fine{font-size:12.5px;color:var(--dim)}
 
-footer{border-top:1px solid var(--line);padding:34px 0;color:var(--dim);font-size:13.5px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.cta-band{border:1px solid rgba(0,229,160,.3);border-radius:24px;padding:60px 48px;text-align:center;background:radial-gradient(600px 240px at 50% 0%,rgba(0,229,160,.14),transparent 70%),var(--card);margin:0 auto}
+.cta-band h2{margin-top:0}
+.cta-band .cta{justify-content:center}
 
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--dim);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
-@media(max-width:960px){
-  .badges{grid-template-columns:1fr 1fr}
-  .hero-grid,.about,.contact{grid-template-columns:1fr}
-  .grid3{grid-template-columns:1fr 1fr}
-  .steps{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}
+@media(max-width:1000px){
+  .hero-grid,.about,.contact,.remote{grid-template-columns:1fr}
+  .stage{max-width:560px}.float.f1{left:-8px}.float.f2{right:-4px}
+  .bento{grid-template-columns:1fr 1fr}.span2,.span3,.span4{grid-column:span 1}
+  .steps,.badges{grid-template-columns:1fr 1fr}
+  .pricing{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .row{grid-template-columns:60px 1fr 110px;}.row .date{display:none}.row.h .date{display:none}
 }
 @media(max-width:640px){
-  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px 24px;border-bottom:1px solid var(--line);gap:18px}
+  section{padding:84px 0}
+  .links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg);padding:22px 24px;border-bottom:1px solid var(--line);gap:20px}
   .links.open{display:flex}.menu{display:block}
-  .grid3,.pr,.two,.badges{grid-template-columns:1fr}
-  .find{grid-template-columns:1fr;gap:10px}.find .st{text-align:left}
-  .hero{padding-top:130px}
+  nav .btn{display:none}
+  .bento,.steps,.badges,.posts,.two,.rgrid{grid-template-columns:1fr}
+  .hero{padding-top:128px}
+  .row{grid-template-columns:54px 1fr;gap:12px;padding:18px 20px}.row .st{display:none}.row.h .st{display:none}
+  .cta-band{padding:44px 24px}
+  .float{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<div class="progress" id="progress"></div>
+<div class="bg"><i></i><i></i><i></i></div>
+<div class="grid-bg"></div>
 
-<nav>
+<nav id="nav">
   <div class="wrap">
-    <a href="#top" class="logo">sachin<b>@</b>sec:~$</a>
+    <a href="#top" class="logo"><span class="mk">SM</span>sachin<span style="color:var(--acc)">@</span>sec</a>
     <div class="links" id="links">
       <a href="#about">About</a><a href="#services">Services</a><a href="#process">Process</a>
-      <a href="#work">Hall of Fame</a><a href="#creds">Credentials</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+      <a href="#hof">Hall of Fame</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
     </div>
-    <a href="#contact" class="btn primary" style="padding:9px 16px">Hire me</a>
+    <a href="#contact" class="btn primary sm">Hire me</a>
     <button class="menu" id="menu" aria-label="Menu">☰</button>
   </div>
 </nav>
@@ -216,54 +299,67 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow"><i class="dot"></i> Available for engagements</span>
-      <h1>I break things <span class="grad">so attackers can't.</span></h1>
-      <p class="lead">Offensive security researcher focused on web, API, mobile and AI/LLM applications. I find the vulnerabilities that matter, prove them with reproducible evidence, and give your engineers a clear path to fix them.</p>
+      <div class="pills">
+        <span class="pill g"><i class="dot"></i>Available for engagements</span>
+        <span class="pill">🌐 100% remote · India &amp; worldwide</span>
+      </div>
+      <h1>Security testing that finds <em>what scanners miss.</em></h1>
+      <p class="lead">I'm <b>Sachin Mishra</b>, a top-1% bug bounty researcher. I test <b>web, API, mobile and AI/LLM</b> applications, prove every finding with reproducible evidence, and hand your engineers a clear path to fix it.</p>
       <div class="cta">
         <a href="#contact" class="btn primary">Request a pentest →</a>
-        <a href="#work" class="btn">See my work</a>
+        <a href="#hof" class="btn">View track record</a>
       </div>
       <div class="trust">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Manual, PoC-validated findings</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Honest severity ratings</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Free retest</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Manual, PoC-validated</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Honest severity</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>NDA &amp; free retest</span>
       </div>
     </div>
-    <div class="term reveal">
-      <div class="term-top"><i></i><i></i><i></i><span>demo — illustrative session</span></div>
-      <div class="term-body" id="term"></div>
+    <div class="stage reveal">
+      <div class="float f2"><b><em>#55</em></b><span>Com Olho global rank</span></div>
+      <div class="term">
+        <div class="term-top"><i></i><i></i><i></i><span>demo — illustrative session</span></div>
+        <div class="term-body" id="term"></div>
+      </div>
+      <div class="float f1"><b>10 <em>HoF</em></b><span>organisations recognised</span></div>
+    </div>
+  </div>
+
+  <div class="rec reveal">
+    <small>Recognised by — Hall of Fame &amp; reward programs</small>
+    <div class="track" id="track"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><b><em data-count="55" data-prefix="#">#55</em></b><span>Com Olho global rank · Top 1%</span></div>
+      <div class="stat"><b><em data-count="125">125</em></b><span>Reports submitted · 12 rewarded</span></div>
+      <div class="stat"><b><em data-count="10">10</em></b><span>Organisations · Hall of Fame</span></div>
+      <div class="stat"><b><em data-count="9">9</em></b><span>Verified Credly badges</span></div>
     </div>
   </div>
 </header>
-
-<div class="wrap">
-  <div class="stats reveal">
-    <div class="stat"><b><em>#55</em></b><span>Com Olho global rank · Top 1%</span></div>
-    <div class="stat"><b><em>125</em></b><span>Reports submitted (12 rewarded)</span></div>
-    <div class="stat"><b><em>10</em></b><span>Organisations · Hall of Fame</span></div>
-    <div class="stat"><b><em>9</em></b><span>Verified Credly badges</span></div>
-  </div>
-</div>
 
 <section id="about">
   <div class="wrap about">
     <div class="reveal">
       <div class="me"><div class="avatar">SM</div><div><b>Sachin Mishra</b><span>Security Researcher · Raipur, India</span></div></div>
-      <div class="tag">// 01 — about</div>
-      <h2>Researcher mindset.<br>Consultant discipline.</h2>
-      <p><strong>I'm Sachin Mishra</strong>, a security researcher and bug bounty hunter from Raipur, India. I test live, real-world applications where a missed bug has a real cost — across fintech, healthcare, e-commerce, SaaS and AI products — and I'm ranked in the top 1% of researchers on Com Olho.</p>
-      <p>I started in 2026 and went from first report to a top-1% Com Olho ranking and ten Hall of Fame recognitions within months, by testing methodically rather than running scanners. I also build with Gemini, ADK and MCP, which lets me test AI systems from the builder's side as well as the attacker's.</p>
+      <div class="tag">About</div>
+      <h2>Researcher mindset. <em>Consultant discipline.</em></h2>
+      <p><strong>I test live, real-world applications</strong> where a missed bug has a real cost — fintech, healthcare, e-commerce, SaaS and AI products — and I'm ranked in the top 1% of researchers on Com Olho.</p>
+      <p>I started in 2026 and went from first report to a top-1% ranking and ten Hall of Fame recognitions within months, by testing methodically rather than running scanners. I also build with Gemini, ADK and MCP, so I can test AI systems from the builder's side as well as the attacker's.</p>
       <p>My approach is <strong>recon → confirm → prove one value → stop</strong>. No inflated severities, no scanner noise dressed up as findings. If it isn't exploitable and reproducible, it doesn't go in the report.</p>
-      <p>I follow the OWASP testing methodology section by section, then go beyond the checklist into business logic, authorization and chained attack paths — where the serious bugs usually live.</p>
       <div class="chips">
-        <span class="chip">Access Control</span><span class="chip">Web App</span><span class="chip">REST / GraphQL</span><span class="chip">Mobile</span><span class="chip">AI / LLM</span>
-        <span class="chip">Cloud</span><span class="chip">Source Review</span><span class="chip">Burp Suite Pro</span><span class="chip">Nuclei</span>
-        <span class="chip">ffuf</span><span class="chip">nmap</span><span class="chip">Frida</span><span class="chip">Python / Bash</span><span class="chip">Gemini · ADK · MCP</span>
+        <span class="chip">Access Control</span><span class="chip">Web App</span><span class="chip">REST / GraphQL</span><span class="chip">Mobile</span>
+        <span class="chip">AI / LLM</span><span class="chip">Cloud</span><span class="chip">Source Review</span><span class="chip">Burp Suite Pro</span>
+        <span class="chip">Nuclei</span><span class="chip">ffuf</span><span class="chip">nmap</span><span class="chip">Frida</span><span class="chip">Python / Bash</span><span class="chip">Gemini · ADK · MCP</span>
       </div>
     </div>
     <div class="kv reveal">
       <div><span>Location</span><b>Raipur, India</b></div>
-      <div><span>Focus</span><b>VAPT · Bug bounty</b></div>
+      <div><span>Work mode</span><b>100% remote</b></div>
+      <div><span>Timezone</span><b>IST (UTC+5:30), flexible overlap</b></div>
+      <div><span>Focus</span><b>VAPT · Bug bounty · AI security</b></div>
       <div><span>Platforms</span><b>Com Olho · HackerOne · direct VDPs</b></div>
       <div><span>Languages</span><b>English, Hindi</b></div>
       <div><span>Engagement</span><b>Project-based · Retainer</b></div>
@@ -272,32 +368,35 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
   </div>
 </section>
 
-<section id="services" style="background:linear-gradient(180deg,transparent,var(--bg2) 20%,var(--bg2) 80%,transparent)">
+<section id="services" class="alt">
   <div class="wrap">
     <div class="head reveal">
-      <div class="tag">// 02 — services</div>
-      <h2>What I test</h2>
+      <div class="tag">Services</div>
+      <h2>What I <em>test</em></h2>
       <p class="sub">Scoped, manual and evidence-driven. Every engagement ends with a report your developers can act on the same day.</p>
     </div>
-    <div class="grid3">
-      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
-        <h3>Web Application Pentest</h3><p>Deep manual testing mapped to OWASP — authentication, sessions, access control and business logic.</p>
-        <ul><li>OWASP Top 10 + ASVS coverage</li><li>AuthZ / IDOR / privilege escalation</li><li>Business-logic abuse</li></ul></div>
-      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg></div>
-        <h3>API Security Testing</h3><p>REST, GraphQL and gRPC assessments focused on object-level authorization and data exposure.</p>
-        <ul><li>BOLA / BFLA / mass assignment</li><li>JWT & OAuth flaws</li><li>Rate limiting & injection</li></ul></div>
-      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
-        <h3>Mobile App Security</h3><p>Android and iOS static + dynamic analysis, traffic interception and runtime instrumentation.</p>
-        <ul><li>Insecure storage & hardcoded secrets</li><li>Pinning & root-detection bypass</li><li>Exported components</li></ul></div>
-      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 00-4 4v1H6a3 3 0 00-3 3v2a3 3 0 003 3h2v1a4 4 0 008 0v-1h2a3 3 0 003-3v-2a3 3 0 00-3-3h-2V7a4 4 0 00-4-4z"/></svg></div>
-        <h3>AI / LLM Security</h3><p>Red-teaming for chatbots, agents and MCP tooling — where the attack surface is new and under-tested.</p>
-        <ul><li>Prompt injection (direct & indirect)</li><li>Tool / agent abuse & data exfil</li><li>System-prompt & secret leakage</li></ul></div>
-      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1A4.5 4.5 0 0117 18z"/></svg></div>
-        <h3>Cloud & Attack Surface</h3><p>External attack-surface mapping and cloud misconfiguration review across AWS, GCP and Azure.</p>
-        <ul><li>Asset & subdomain discovery</li><li>Storage / IAM exposure</li><li>Takeover & leak checks</li></ul></div>
-      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg></div>
-        <h3>Secure Code Review</h3><p>Source-level audit to trace untrusted input to dangerous sinks and catch what black-box testing misses.</p>
-        <ul><li>Injection & deserialization sinks</li><li>Auth & crypto misuse</li><li>Dependency risk</li></ul></div>
+    <div class="bento">
+      <div class="card span4 reveal"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
+        <h3>Web Application Pentest</h3><p>Deep manual testing mapped to OWASP — authentication, sessions, access control and business logic, where the serious bugs usually live.</p>
+        <ul><li>OWASP Top 10 + ASVS coverage</li><li>AuthZ, IDOR and privilege escalation</li><li>Business-logic and payment-flow abuse</li></ul></div>
+      <div class="card span2 reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 00-4 4v1H6a3 3 0 00-3 3v2a3 3 0 003 3h2v1a4 4 0 008 0v-1h2a3 3 0 003-3v-2a3 3 0 00-3-3h-2V7a4 4 0 00-4-4z"/></svg></div>
+        <h3>AI / LLM Security</h3><p>Red-teaming chatbots, agents and MCP tooling.</p>
+        <ul><li>Prompt injection</li><li>Agent &amp; tool abuse</li><li>Prompt / secret leakage</li></ul></div>
+      <div class="card span2 reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg></div>
+        <h3>API Security</h3><p>REST, GraphQL and gRPC.</p>
+        <ul><li>BOLA / BFLA</li><li>JWT &amp; OAuth flaws</li><li>Mass assignment</li></ul></div>
+      <div class="card span2 reveal"><div class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+        <h3>Mobile Security</h3><p>Android static + dynamic analysis.</p>
+        <ul><li>Hardcoded secrets</li><li>Insecure storage</li><li>Traffic &amp; API review</li></ul></div>
+      <div class="card span2 reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1A4.5 4.5 0 0117 18z"/></svg></div>
+        <h3>Cloud &amp; Attack Surface</h3><p>External exposure and cloud misconfiguration.</p>
+        <ul><li>Asset discovery</li><li>Storage / IAM exposure</li><li>Takeover &amp; leak checks</li></ul></div>
+      <div class="card span3 reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg></div>
+        <h3>Secure Code Review</h3><p>Trace untrusted input to dangerous sinks.</p>
+        <ul><li>Injection &amp; deserialization</li><li>Auth &amp; crypto misuse</li><li>Dependency risk</li></ul></div>
+      <div class="card span3 reveal"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></div>
+        <h3>Network Penetration Test</h3><p>External and internal assessment of exposed services and segmentation.</p>
+        <ul><li>Service &amp; configuration review</li><li>Exposure and segmentation checks</li><li>Prioritised remediation</li></ul></div>
     </div>
   </div>
 </section>
@@ -305,15 +404,75 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
 <section id="process">
   <div class="wrap">
     <div class="head reveal">
-      <div class="tag">// 03 — process</div>
-      <h2>From scope to sign-off</h2>
-      <p class="sub">A transparent, four-stage engagement with no surprises.</p>
+      <div class="tag">Process</div>
+      <h2>From scope to <em>sign-off</em></h2>
+      <p class="sub">A transparent, four-stage engagement run entirely remotely, with no surprises.</p>
     </div>
-    <div class="steps reveal">
-      <div class="step"><div class="n">01</div><h3>Scope & Recon</h3><p>Rules of engagement, asset list and auth model agreed up front. Then passive and active mapping of the real attack surface.</p></div>
-      <div class="step"><div class="n">02</div><h3>Exploit & Validate</h3><p>Manual testing and chained attacks. Every finding is confirmed with a minimal, safe proof of concept.</p></div>
-      <div class="step"><div class="n">03</div><h3>Report & Debrief</h3><p>Executive summary, technical write-up with replay steps, CVSS-rated risks and prioritised remediation.</p></div>
-      <div class="step"><div class="n">04</div><h3>Retest</h3><p>After your fixes ship, I re-verify each finding and confirm closure.</p></div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01</div><h3>Scope &amp; Recon</h3><p>A kickoff call, rules of engagement and NDA. Then passive and active mapping of your real attack surface.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>Exploit &amp; Validate</h3><p>Manual testing and chained attacks. Every finding is confirmed with a minimal, safe proof of concept.</p></div>
+      <div class="step reveal"><div class="n">03</div><h3>Report &amp; Debrief</h3><p>Executive summary, technical write-up with replay steps, CVSS-rated risks, and a live walkthrough over video call.</p></div>
+      <div class="step reveal"><div class="n">04</div><h3>Retest &amp; Sign-off</h3><p>After your fixes ship, I re-verify every finding and issue a closure confirmation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hof" class="alt">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="tag">Track record</div>
+      <h2>Recognised by <em>10 organisations</em></h2>
+      <p class="sub">Accepted and rewarded disclosures across fintech, healthcare, retail and manufacturing. Severity is shown as rated by each program (P1 = most severe). Technical details are withheld under disclosure terms.</p>
+    </div>
+    <div class="hof reveal">
+      <div class="row h"><span>Sev.</span><span>Program</span><span class="date">Date</span><span class="st">Status</span></div>
+      <div class="row"><span class="sev h">P2</span><div><h3>Nykaa</h3><p>Bug Bounty Program · Business logic</p></div><span class="date">Jan 2026</span><span class="st">Rewarded</span></div>
+      <div class="row"><span class="sev h">P2</span><div><h3>Sai Life Sciences</h3><p>Responsible Disclosure Program</p></div><span class="date">Jan 2026</span><span class="st">Rewarded</span></div>
+      <div class="row"><span class="sev m">P3</span><div><h3>Maruti Suzuki India Ltd</h3><p>Security Reward Program · Sensitive data exposure</p></div><span class="date">May 2026</span><span class="st">Rewarded</span></div>
+      <div class="row"><span class="sev m">P3</span><div><h3>KARAM</h3><p>Responsible Disclosure Program</p></div><span class="date">May 2026</span><span class="st">Certificate</span></div>
+      <div class="row"><span class="sev l">P4</span><div><h3>Zerodha</h3><p>Partner Platform Bug Bounty · Broken access control</p></div><span class="date">May 2026</span><span class="st">Rewarded</span></div>
+      <div class="row"><span class="sev l">P4</span><div><h3>HDFC Life</h3><p>Responsible Disclosure Program · Crypto failures</p></div><span class="date">Apr 2026</span><span class="st">Certificate</span></div>
+      <div class="row"><span class="sev l">P4</span><div><h3>Sir Ganga Ram Hospital</h3><p>Vulnerability Disclosure Program</p></div><span class="date">Mar 2026</span><span class="st">Certificate</span></div>
+      <div class="row"><span class="sev l">P4</span><div><h3>Orient Electric</h3><p>Researcher Reward Program · Sensitive data exposure</p></div><span class="date">Jan 2026</span><span class="st">Rewarded</span></div>
+      <div class="row"><span class="sev l">—</span><div><h3>Max Healthcare</h3><p>Responsible Disclosure Program · First reward</p></div><span class="date">Jan 2026</span><span class="st">Rewarded</span></div>
+      <div class="row"><span class="sev l">—</span><div><h3>Bolt.Earth</h3><p>Vulnerability Disclosure · Hall of Fame</p></div><span class="date">2026</span><span class="st">Hall of Fame</span></div>
+    </div>
+    <p class="note">// verify: <a href="https://cyber.comolho.com/researcher/profile/yash4078/" target="_blank" rel="noopener">cyber.comolho.com/researcher/profile/yash4078</a> — 125 reports submitted, 12 rewarded, global rank #55.</p>
+  </div>
+</section>
+
+<section id="creds">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="tag">Credentials</div>
+      <h2>Verified <em>badges</em></h2>
+      <p class="sub">Issued through Credly and publicly verifiable. Focused on API security, cloud and applied AI.</p>
+    </div>
+    <div class="badges">
+      <div class="badge reveal"><i>SECURITY</i><b>Introduction to Cybersecurity</b><span>Cisco · Mar 2026</span></div>
+      <div class="badge reveal"><i>SECURITY</i><b>API Security Fundamentals '25</b><span>APIsec University · Mar 2026</span></div>
+      <div class="badge reveal"><i class="cl">CLOUD</i><b>Set Up a Google Cloud Network</b><span>Google Cloud · May 2026</span></div>
+      <div class="badge reveal"><i class="ai">AI</i><b>Create Your First Gemini Enterprise Application</b><span>Google Cloud · May 2026</span></div>
+      <div class="badge reveal"><i class="ai">AI</i><b>Use Machine Learning APIs on Google Cloud</b><span>Google Cloud · May 2026</span></div>
+      <div class="badge reveal"><i class="ai">AI</i><b>Prompt Design in Vertex AI</b><span>Google Cloud · Aug 2026</span></div>
+      <div class="badge reveal"><i class="ai">AI</i><b>Develop GenAI Apps with Gemini and Streamlit</b><span>Google Cloud · Aug 2026</span></div>
+      <div class="badge reveal"><i class="ai">AI</i><b>Google AI Essentials</b><span>Coursera · May 2026</span></div>
+      <div class="badge reveal"><i class="ai">AI</i><b>Google Prompting Essentials</b><span>Coursera · May 2026</span></div>
+    </div>
+    <p class="note">// full wallet: <a href="https://www.credly.com/users/avengers-yash-mishra" target="_blank" rel="noopener">credly.com/users/avengers-yash-mishra</a></p>
+  </div>
+</section>
+
+<section id="writing" class="alt">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="tag">Writing</div>
+      <h2>Research &amp; <em>build notes</em></h2>
+      <p class="sub">Writing on building and securing AI systems on Google Cloud.</p>
+    </div>
+    <div class="posts">
+      <a class="post reveal" href="https://medium.com/@yash4078" target="_blank" rel="noopener"><small>Sep 3 · Medium</small><h3>Beyond the Demo: I Built a Secure Gemini Journal on Cloud Run — Then I Attacked It</h3><p>Building a Gemini app for the Google Cloud Gen AI Academy APAC Ideathon, then red-teaming my own deployment.</p><span class="rd">Read on Medium →</span></a>
+      <a class="post reveal" href="https://medium.com/@yash4078" target="_blank" rel="noopener"><small>Aug 16 · Medium</small><h3>From Zero Cloud Account to Two Live AI Agents in One Day</h3><p>A RAG-powered barista and a BigQuery data analyst using Google ADK, Gemini, MCP and Cloud Run.</p><span class="rd">Read on Medium →</span></a>
     </div>
   </div>
 </section>
@@ -321,171 +480,172 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
 <section id="pricing">
   <div class="wrap">
     <div class="head reveal">
-      <div class="tag">// 03 — pricing</div>
-      <h2>Transparent starting rates</h2>
-      <p class="sub">Fixed-scope pricing with report and retest included. Final quote depends on scope size and complexity.</p>
+      <div class="tag">Pricing</div>
+      <h2>Transparent <em>starting rates</em></h2>
+      <p class="sub">Fixed-scope pricing with the report and a free retest included. Your final quote depends on scope size and complexity.</p>
     </div>
-    <div class="grid3">
-      <div class="card price reveal"><h3>Web Application Pentest</h3><p>OWASP-aligned manual assessment with business-logic and access-control focus.</p>
-        <div class="amt">$1,500<small> / starting</small></div><div class="was">report + free retest</div><ul><li>Auth & session review</li><li>IDOR / privilege escalation</li><li>Remediation report</li></ul><a href="#contact" class="btn primary">Get a quote</a></div>
-      <div class="card price reveal"><h3>Network Penetration Test</h3><p>External / internal assessment with segmentation and exposure review.</p>
-        <div class="amt">$3,750<small> / starting</small></div><div class="was">report + free retest</div><ul><li>External / internal scope</li><li>Service & config review</li><li>Prioritised findings</li></ul><a href="#contact" class="btn primary">Get a quote</a></div>
-      <div class="card price reveal"><h3>Mobile Security Testing</h3><p>Android assessment: static and dynamic analysis, traffic and storage review.</p>
-        <div class="amt">$1,250<small> / starting</small></div><div class="was">report + free retest</div><ul><li>Static & dynamic analysis</li><li>API & data-leak review</li><li>Hardcoded secret hunt</li></ul><a href="#contact" class="btn primary">Get a quote</a></div>
+    <div class="toggle reveal" id="cur"><button class="on" data-c="inr">₹ INR</button><button data-c="usd">$ USD</button></div>
+    <div class="pricing">
+      <div class="card plan feat reveal"><span class="badge-top">POPULAR</span><h3>Web Application Pentest</h3><p>OWASP-aligned manual assessment with business-logic and access-control focus.</p>
+        <div class="amt"><span data-inr="₹1,25,000" data-usd="$1,500">₹1,25,000</span><small> onwards</small></div><div class="alt-amt"><span data-inr="≈ $1,500 USD" data-usd="≈ ₹1,25,000 INR">≈ $1,500 USD</span></div>
+        <ul><li>Auth, session &amp; access-control review</li><li>IDOR / privilege escalation</li><li>Business-logic testing</li><li>Report + live debrief + free retest</li></ul><a href="#contact" class="btn primary">Get a quote</a></div>
+      <div class="card plan reveal"><h3>Network Penetration Test</h3><p>External / internal assessment with segmentation and exposure review.</p>
+        <div class="amt"><span data-inr="₹3,25,000" data-usd="$3,750">₹3,25,000</span><small> onwards</small></div><div class="alt-amt"><span data-inr="≈ $3,750 USD" data-usd="≈ ₹3,25,000 INR">≈ $3,750 USD</span></div>
+        <ul><li>External / internal scope</li><li>Service &amp; configuration review</li><li>Prioritised findings</li><li>Report + free retest</li></ul><a href="#contact" class="btn">Get a quote</a></div>
+      <div class="card plan reveal"><h3>Mobile Security Testing</h3><p>Android assessment: static and dynamic analysis, traffic and storage review.</p>
+        <div class="amt"><span data-inr="₹1,05,000" data-usd="$1,250">₹1,05,000</span><small> onwards</small></div><div class="alt-amt"><span data-inr="≈ $1,250 USD" data-usd="≈ ₹1,05,000 INR">≈ $1,250 USD</span></div>
+        <ul><li>Static &amp; dynamic analysis</li><li>API &amp; data-leak review</li><li>Hardcoded secret hunt</li><li>Report + free retest</li></ul><a href="#contact" class="btn">Get a quote</a></div>
     </div>
-    <p class="note">// API security, AI/LLM red-teaming, cloud and secure code review: custom quote. Prices in USD; INR invoicing available.</p>
+    <div class="card custom reveal"><div><h3>API security, AI/LLM red-teaming, cloud &amp; code review</h3><p>Priced per scope. Share your target and I'll send a fixed quote within 24 hours.</p></div><a href="#contact" class="btn">Request custom quote</a></div>
+    <p class="note">// prices are starting rates for a standard scope, excluding applicable taxes. Payment in INR (UPI / bank transfer) or USD. Milestone-based billing available.</p>
   </div>
 </section>
 
-<section id="work" style="background:var(--bg2)">
+<section id="remote" class="alt">
+  <div class="wrap remote">
+    <div class="reveal">
+      <div class="tag">Remote-first</div>
+      <h2>Works anywhere, <em>fully remote</em></h2>
+      <p class="sub">Every engagement is delivered remotely from India — no travel, no on-site delays. Teams in India, the Middle East, Europe and the US all work with me the same way.</p>
+    </div>
+    <div class="rgrid">
+      <div class="card reveal"><h3>Secure collaboration</h3><p>Findings shared over encrypted channels. NDA signed before scope details are exchanged.</p></div>
+      <div class="card reveal"><h3>Flexible overlap</h3><p>Based on IST, with calls scheduled to suit your team's working hours.</p></div>
+      <div class="card reveal"><h3>Safe-by-design testing</h3><p>Rate limits respected, no destructive payloads, no data exfiltration beyond a minimal proof.</p></div>
+      <div class="card reveal"><h3>Clear communication</h3><p>Critical findings escalated immediately, not held until the final report.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
   <div class="wrap">
     <div class="head reveal">
-      <div class="tag">// 04 — hall of fame</div>
-      <h2>Recognised by 10 organisations</h2>
-      <p class="sub">Accepted and rewarded disclosures from Indian enterprises across fintech, healthcare, retail and manufacturing. Severity shown as rated by each program (P1 = most severe). Technical details are withheld under disclosure terms.</p>
+      <div class="tag">FAQ</div>
+      <h2>Common <em>questions</em></h2>
     </div>
-    <div class="find reveal"><span class="sev h">P2</span><div><h3>Nykaa Bug Bounty Program</h3><p>Jan 2026 · Business logic</p></div><span class="st">Rewarded</span></div>
-    <div class="find reveal"><span class="sev h">P2</span><div><h3>Sai Life Sciences — Responsible Disclosure</h3><p>Jan 2026</p></div><span class="st">Rewarded</span></div>
-    <div class="find reveal"><span class="sev m">P3</span><div><h3>Maruti Suzuki India Ltd — Security Reward Program</h3><p>May 2026 · Sensitive data exposure</p></div><span class="st">Rewarded</span></div>
-    <div class="find reveal"><span class="sev m">P3</span><div><h3>KARAM — Responsible Disclosure Program</h3><p>May 2026</p></div><span class="st">Certificate</span></div>
-    <div class="find reveal"><span class="sev l">P4</span><div><h3>Zerodha — Partner Platform Bug Bounty</h3><p>May 2026 · Broken access control</p></div><span class="st">Rewarded</span></div>
-    <div class="find reveal"><span class="sev l">P4</span><div><h3>HDFC Life — Responsible Disclosure</h3><p>Apr 2026 · Crypto failures</p></div><span class="st">Certificate</span></div>
-    <div class="find reveal"><span class="sev l">P4</span><div><h3>Sir Ganga Ram Hospital — Vulnerability Disclosure</h3><p>Mar 2026</p></div><span class="st">Certificate</span></div>
-    <div class="find reveal"><span class="sev l">P4</span><div><h3>Orient Electric — Researcher Reward Program</h3><p>Jan 2026 · Sensitive data exposure</p></div><span class="st">Rewarded</span></div>
-    <div class="find reveal"><span class="sev l">Ack</span><div><h3>Max Healthcare — Responsible Disclosure</h3><p>Jan 2026 · First reward</p></div><span class="st">Rewarded</span></div>
-    <div class="find reveal"><span class="sev l">Ack</span><div><h3>Bolt.Earth — Vulnerability Disclosure</h3><p>2026</p></div><span class="st">Hall of Fame</span></div>
-    <p class="note">// verify on my public profile: <a href="https://cyber.comolho.com/researcher/profile/yash4078/" target="_blank" rel="noopener" style="color:var(--acc)">cyber.comolho.com/researcher/profile/yash4078</a> — 125 reports submitted, 12 rewarded, global rank #55.</p>
+    <div class="faq reveal">
+      <details><summary>Do I need to be physically present or share VPN access?</summary><p>No. Public-facing targets are tested entirely remotely. For internal or staging targets, we agree on access (VPN, allow-listed IP, or test accounts) during scoping.</p></details>
+      <details><summary>How do you price an engagement?</summary><p>Starting rates are listed above for a standard scope. Larger apps, more roles, or more endpoints change the quote. You always get a fixed price before any work starts.</p></details>
+      <details><summary>Will testing break my production system?</summary><p>No destructive testing. I respect rate limits and agreed windows, use minimal proofs of concept, and stop at the first value that proves impact.</p></details>
+      <details><summary>How is severity decided?</summary><p>By the impact I can actually demonstrate, scored with CVSS. I don't inflate findings or pad reports with scanner noise.</p></details>
+      <details><summary>Is retesting included?</summary><p>Yes. Once your team ships fixes, I re-verify each finding and confirm closure at no extra cost.</p></details>
+      <details><summary>Can you sign an NDA?</summary><p>Yes, before any details are exchanged. I'm KYC-verified on Com Olho and can work under your NDA or mine.</p></details>
+      <details><summary>Do you invoice in INR?</summary><p>I can invoice in INR for Indian companies and in USD for international clients. Share your billing requirements when you request a quote.</p></details>
+    </div>
   </div>
 </section>
 
-<section id="creds">
+<section id="contact" class="alt">
   <div class="wrap">
-    <div class="head reveal">
-      <div class="tag">// 05 — credentials</div>
-      <h2>Verified badges</h2>
-      <p class="sub">Issued through Credly and verifiable publicly. Focused on API security, cloud and applied AI — the areas I test hardest.</p>
+    <div class="cta-band reveal" style="margin-bottom:80px">
+      <div class="tag" style="justify-content:center">Let's talk</div>
+      <h2>Ready to find the bugs <em>before attackers do?</em></h2>
+      <p class="sub" style="margin:0 auto">Share your target type, rough scope and timeline. You'll get a reply within 24 hours.</p>
+      <div class="cta"><a class="btn primary" href="mailto:yash4078@gmail.com?subject=Security%20engagement%20enquiry">Email me →</a><a class="btn" href="https://www.linkedin.com/in/sachin-mishra-ab22113a2/" target="_blank" rel="noopener">Connect on LinkedIn</a></div>
     </div>
-    <div class="badges">
-      <div class="badge reveal"><i>SECURITY</i><b>Introduction to Cybersecurity</b><span>Cisco · Mar 2026</span></div>
-      <div class="badge reveal"><i>SECURITY</i><b>API Security Fundamentals '25</b><span>APIsec University · Mar 2026</span></div>
-      <div class="badge reveal"><i>CLOUD</i><b>Set Up a Google Cloud Network</b><span>Google Cloud · May 2026</span></div>
-      <div class="badge reveal"><i>AI</i><b>Create Your First Gemini Enterprise Application</b><span>Google Cloud · May 2026</span></div>
-      <div class="badge reveal"><i>AI</i><b>Use Machine Learning APIs on Google Cloud</b><span>Google Cloud · May 2026</span></div>
-      <div class="badge reveal"><i>AI</i><b>Prompt Design in Vertex AI</b><span>Google Cloud · Aug 2026</span></div>
-      <div class="badge reveal"><i>AI</i><b>Develop GenAI Apps with Gemini and Streamlit</b><span>Google Cloud · Aug 2026</span></div>
-      <div class="badge reveal"><i>AI</i><b>Google AI Essentials</b><span>Coursera · May 2026</span></div>
-      <div class="badge reveal"><i>AI</i><b>Google Prompting Essentials</b><span>Coursera · May 2026</span></div>
-    </div>
-    <p class="note">// full wallet: <a href="https://www.credly.com/users/avengers-yash-mishra" target="_blank" rel="noopener" style="color:var(--acc)">credly.com/users/avengers-yash-mishra</a></p>
-  </div>
-</section>
-
-<section id="writing" style="background:var(--bg2)">
-  <div class="wrap">
-    <div class="head reveal">
-      <div class="tag">// 06 — writing</div>
-      <h2>Research & build notes</h2>
-      <p class="sub">Writing on securing and building AI systems on Google Cloud.</p>
-    </div>
-    <div class="grid3" style="grid-template-columns:1fr 1fr">
-      <a class="post reveal" href="https://medium.com/@yash4078" target="_blank" rel="noopener"><small>Sep 3 · Medium</small><h3>Beyond the Demo: I Built a Secure Gemini Journal on Cloud Run — Then I Attacked It</h3><p>Building a Gemini app for the Google Cloud Gen AI Academy APAC Ideathon, then red-teaming my own deployment.</p></a>
-      <a class="post reveal" href="https://medium.com/@yash4078" target="_blank" rel="noopener"><small>Aug 16 · Medium</small><h3>From Zero Cloud Account to Two Live AI Agents in One Day</h3><p>A RAG-powered barista and a BigQuery data analyst using Google ADK, Gemini, MCP and Cloud Run.</p></a>
-    </div>
-    <p class="note">// all posts → <a href="https://medium.com/@yash4078" target="_blank" rel="noopener" style="color:var(--acc)">medium.com/@yash4078</a></p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="head reveal">
-      <div class="tag">// 07 — principles</div>
-      <h2>How I work</h2>
-    </div>
-    <div class="pr">
-      <div class="card reveal"><h3>Honest severity</h3><p>A finding is rated for the impact I can actually demonstrate — not the one that sounds scariest. You get a report you can trust and prioritise from.</p></div>
-      <div class="card reveal"><h3>Zero scanner noise</h3><p>Tools speed up recon; they don't write the report. Every issue is manually confirmed and reproducible before it reaches you.</p></div>
-      <div class="card reveal"><h3>Minimal, safe proof</h3><p>I prove impact with the least invasive PoC possible. No data destruction, no service disruption, no going beyond scope.</p></div>
-      <div class="card reveal"><h3>Engineer-first reporting</h3><p>Clear title, impact, exact steps, and a concrete fix. Written so a developer can reproduce and patch without a meeting.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" style="background:linear-gradient(180deg,var(--bg2),transparent)">
-  <div class="wrap contact">
-    <div class="ct reveal">
-      <div class="tag">// 08 — contact</div>
-      <h2>Let's secure your product</h2>
-      <p class="sub" style="margin-bottom:26px">Share the target type, rough scope and timeline. NDA available before any details are exchanged.</p>
-      <!-- EDIT: put your real links -->
-      <a class="row" href="mailto:yash4078@gmail.com"><span>✉</span><div>yash4078@gmail.com<small>Email · reply within 24h</small></div></a>
-      <a class="row" href="https://www.linkedin.com/in/sachin-mishra-ab22113a2/" target="_blank" rel="noopener"><span>in</span><div>linkedin.com/in/sachin-mishra-ab22113a2<small>LinkedIn</small></div></a>
-      <a class="row" href="https://github.com/yash4078-ops" target="_blank" rel="noopener"><span>⌥</span><div>github.com/yash4078-ops<small>GitHub</small></div></a>
-      <a class="row" href="https://medium.com/@yash4078" target="_blank" rel="noopener"><span>✎</span><div>medium.com/@yash4078<small>Writing</small></div></a>
-    </div>
-    <form id="form" class="reveal">
-      <div class="two">
-        <div><label for="n">NAME *</label><input id="n" required></div>
-        <div><label for="e">EMAIL *</label><input id="e" type="email" required></div>
+    <div class="contact">
+      <div class="ct reveal">
+        <div class="tag">Contact</div>
+        <h2>Start an <em>engagement</em></h2>
+        <p class="sub" style="margin-bottom:26px">NDA available before any details are shared. Please don't send secrets or production credentials.</p>
+        <a class="r" href="mailto:yash4078@gmail.com"><span class="ic">@</span><div>yash4078@gmail.com<small>Email · reply within 24h</small></div></a>
+        <a class="r" href="https://www.linkedin.com/in/sachin-mishra-ab22113a2/" target="_blank" rel="noopener"><span class="ic">in</span><div>Sachin Mishra<small>LinkedIn</small></div></a>
+        <a class="r" href="https://github.com/yash4078-ops" target="_blank" rel="noopener"><span class="ic">gh</span><div>github.com/yash4078-ops<small>GitHub</small></div></a>
+        <a class="r" href="https://medium.com/@yash4078" target="_blank" rel="noopener"><span class="ic">M</span><div>medium.com/@yash4078<small>Writing</small></div></a>
+        <a class="r" href="https://cyber.comolho.com/researcher/profile/yash4078/" target="_blank" rel="noopener"><span class="ic">CO</span><div>Com Olho · yash4078<small>Verified researcher profile</small></div></a>
       </div>
-      <div class="two">
-        <div><label for="c">COMPANY</label><input id="c"></div>
-        <div><label for="s">SERVICE</label>
-          <select id="s"><option>Web Application Pentest</option><option>API Security Testing</option><option>Mobile App Security</option><option>AI / LLM Security</option><option>Cloud & Attack Surface</option><option>Secure Code Review</option><option>Other</option></select></div>
-      </div>
-      <div><label for="m">MESSAGE *</label><textarea id="m" required placeholder="Target type, scope, timeline, NDA needed?"></textarea></div>
-      <button class="btn primary" type="submit" style="justify-content:center">Send message →</button>
-      <p class="fine">Please don't send secrets or production credentials. High-level scope is enough for a first reply.</p>
-    </form>
+      <form id="form" class="reveal">
+        <div class="two">
+          <div><label for="n">NAME *</label><input id="n" required autocomplete="name"></div>
+          <div><label for="e">EMAIL *</label><input id="e" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="two">
+          <div><label for="c">COMPANY</label><input id="c" autocomplete="organization"></div>
+          <div><label for="s">SERVICE</label>
+            <select id="s"><option>Web Application Pentest</option><option>API Security Testing</option><option>Mobile App Security</option><option>AI / LLM Security</option><option>Network Penetration Test</option><option>Cloud &amp; Attack Surface</option><option>Secure Code Review</option><option>Other</option></select></div>
+        </div>
+        <div><label for="m">MESSAGE *</label><textarea id="m" required placeholder="Target type, rough scope, timeline, NDA needed?"></textarea></div>
+        <button class="btn primary" type="submit">Send message →</button>
+        <p class="fine">Opens your email app with the details filled in. High-level scope is enough for the first reply.</p>
+      </form>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr"></span> Sachin Mishra — Security Researcher</span>
-    <span class="mono">Authorized testing only.</span>
+    <span>© <span id="yr"></span> Sachin Mishra — Security Researcher · Raipur, India</span>
+    <span class="mono">Authorized testing only · Remote worldwide</span>
   </div>
 </footer>
 
 <script>
-// mobile menu
-const links=document.getElementById('links');
-document.getElementById('menu').onclick=()=>links.classList.toggle('open');
-links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
-document.getElementById('yr').textContent=new Date().getFullYear();
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 
-// reveal on scroll
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// nav + progress + mobile menu
+const nav=$('#nav'), prog=$('#progress');
+addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',scrollY>20);
+  const h=document.documentElement;prog.style.width=(scrollY/(h.scrollHeight-h.clientHeight)*100)+'%';
+},{passive:true});
+$('#menu').onclick=()=>$('#links').classList.toggle('open');
+$$('#links a').forEach(a=>a.onclick=()=>$('#links').classList.remove('open'));
+$('#yr').textContent=new Date().getFullYear();
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+$$('.reveal').forEach(el=>io.observe(el));
+
+// counters
+const co=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;co.unobserve(e.target);
+  const el=e.target,end=+el.dataset.count,pre=el.dataset.prefix||'';
+  if(reduce){el.textContent=pre+end;return}
+  const t0=performance.now(),d=1400;
+  (function f(t){const p=Math.min((t-t0)/d,1),v=Math.round(end*(1-Math.pow(1-p,3)));el.textContent=pre+v;if(p<1)requestAnimationFrame(f)})(t0);
+}),{threshold:.6});
+$$('[data-count]').forEach(el=>co.observe(el));
 
 // card spotlight
-document.querySelectorAll('.card').forEach(c=>c.addEventListener('mousemove',e=>{
+$$('.card').forEach(c=>c.addEventListener('mousemove',e=>{
   const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
 }));
 
-// terminal typing
+// marquee
+const orgs=['Zerodha','Nykaa','HDFC Life','Maruti Suzuki','Max Healthcare','Orient Electric','Sai Life Sciences','Sir Ganga Ram Hospital','KARAM','Bolt.Earth'];
+const tr=$('#track');tr.innerHTML=[...orgs,...orgs].map(o=>`<span>${o}</span>`).join('');
+
+// currency toggle
+$$('#cur button').forEach(b=>b.onclick=()=>{
+  $$('#cur button').forEach(x=>x.classList.toggle('on',x===b));
+  const k=b.dataset.c;
+  $$('[data-inr]').forEach(el=>el.textContent=el.dataset[k]);
+});
+
+// terminal
 const lines=[
- ['<span class="p">$</span> init engagement --mode authorized','c'],
- ['<span class="ok">✓</span> scope locked · rules of engagement signed',''],
- ['<span class="p">$</span> map attack_surface --scope production','c'],
- ['<span class="b">→</span> hosts, endpoints and auth flows enumerated',''],
- ['<span class="p">$</span> test authz --manual','c'],
- ['<span class="x">[CRITICAL]</span> IDOR → account takeover  <span class="ok">validated</span>',''],
- ['<span class="w">[HIGH]</span> JWT validation flaw  <span class="ok">validated</span>',''],
- ['<span class="p">$</span> export report --exec-summary --retest','c'],
- ['<span class="ok">✓</span> report delivered · retest scheduled',''],
+ '<span class="p">$</span> init engagement --mode authorized --remote',
+ '<span class="ok">✓</span> scope locked · NDA signed · RoE agreed',
+ '<span class="p">$</span> map attack_surface --scope production',
+ '<span class="b">→</span> hosts, endpoints and auth flows enumerated',
+ '<span class="p">$</span> test authz --manual',
+ '<span class="x">[CRITICAL]</span> IDOR → account takeover  <span class="ok">validated</span>',
+ '<span class="w">[HIGH]</span> JWT validation flaw  <span class="ok">validated</span>',
+ '<span class="p">$</span> export report --exec-summary --retest',
+ '<span class="ok">✓</span> report delivered · retest scheduled',
 ];
-const t=document.getElementById('term');
-const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const t=$('#term');
 (async()=>{
-  for(const [html] of lines){
+  for(const html of lines){
     const d=document.createElement('div');d.innerHTML=html;t.appendChild(d);
-    if(!reduce) await new Promise(r=>setTimeout(r,620));
+    if(!reduce) await new Promise(r=>setTimeout(r,600));
   }
   const cur=document.createElement('div');cur.innerHTML='<span class="p">$</span> <span class="cursor"></span>';t.appendChild(cur);
 })();
 
-// contact form -> mailto (no backend needed). Swap for Formspree/Netlify Forms if you want real submission.
-document.getElementById('form').addEventListener('submit',e=>{
+// contact form -> mailto
+$('#form').addEventListener('submit',e=>{
   e.preventDefault();
   const v=id=>document.getElementById(id).value;
   const body=`Name: ${v('n')}\nEmail: ${v('e')}\nCompany: ${v('c')}\nService: ${v('s')}\n\n${v('m')}`;
